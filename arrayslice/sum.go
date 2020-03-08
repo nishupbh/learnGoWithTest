@@ -1,4 +1,4 @@
-package arraySlice
+package arrayslice
 
 func sum(val []int) int {
 	sumValue := 0
@@ -17,19 +17,18 @@ func sumAll(val ...[]int) []int {
 	return sums
 }
 
-func sumAllTrails(numbersToSum ...[]int) []int{
+func sumAllTrails(numbersToSum ...[]int) []int {
 	sums := []int{}
 
-	for _, number := range numbersToSum{
-		
-		if len(number) == 0{
-			sums = append(sums,0)
-		}else{
+	for _, number := range numbersToSum {
+
+		if len(number) == 0 {
+			sums = append(sums, 0)
+		} else {
 			tail := number[1:]
-			sums = append(sums,sum(tail))
+			sums = append(sums, sum(tail))
 		}
 	}
-return sums
-
+	return sums
 
 }

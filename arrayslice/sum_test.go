@@ -1,4 +1,4 @@
-package arraySlice
+package arrayslice
 
 import (
 	"reflect"
@@ -27,26 +27,25 @@ func TestSumAll(t *testing.T) {
 	}
 }
 
-
-func TestSumAllTails( t *testing.T){
-	checkSums := func(t *testing.T,got,want []int) {
+func TestSumAllTails(t *testing.T) {
+	checkSums := func(t *testing.T, got, want []int) {
 		t.Helper()
 		if !reflect.DeepEqual(got, want) {
 			t.Errorf("got %v want %v", got, want)
-		}	
+		}
 	}
 
-	t.Run("make the sum of all tails", func(t *testing.T){
+	t.Run("make the sum of all tails", func(t *testing.T) {
 		got := sumAllTrails([]int{1, 2}, []int{0, 9})
-        want := []int{2, 9}
+		want := []int{2, 9}
 		checkSums(t, got, want)
-		
+
 	})
 
-	t.Run("make the sum of all tails", func(t *testing.T){
+	t.Run("make the sum of all tails", func(t *testing.T) {
 		got := sumAllTrails([]int{}, []int{0, 9})
-        want := []int{0, 9}
+		want := []int{0, 9}
 		checkSums(t, got, want)
-		
+
 	})
 }
